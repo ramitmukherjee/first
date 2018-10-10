@@ -12,7 +12,7 @@ public class ShowServlet extends HttpServlet {
 	public void service (HttpServletRequest req, HttpServletResponse res) throws IOException {
 		Object result = req.getSession().getAttribute("result");
 		if (null != result) {
-			res.getWriter().println((int) result);
+			res.getWriter().println(result);
 		} else {
 			res.getWriter().println("\"result\" Object not in session");
 		}
